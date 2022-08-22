@@ -48,7 +48,12 @@ curl -X POST 'http://0.0.0.0:9000/account/?pretty=true' -H 'Content-Type: applic
 	"amount": "aSN2QHZYeExjRE0h"
 }'
 ```
- # run project with docker
+# Run project with docker
+## Prerequisites
+
+Docker ➔ https://docs.docker.com/get-docker/
+
+Docker Compose ➔ https://docs.docker.com/compose/install
 1. Go to project root folder and execute below command to build docker image
 ```
 sudo docker build -t djdocker_web .
