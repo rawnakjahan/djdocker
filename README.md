@@ -48,4 +48,27 @@ curl -X POST 'http://0.0.0.0:9000/account/?pretty=true' -H 'Content-Type: applic
 	"amount": "aSN2QHZYeExjRE0h"
 }'
 ```
- 
+ # run project with docker
+1. Go to project root folder and execute below command to build docker image
+```
+sudo docker build -t djdocker_web .
+```
+2. execute below command to run the container
+```
+docker-compose up
+```
+3. Use Endpoint http://0.0.0.0:8000/account/ to execute the POST operation from docker image with below request information.
+```
+{
+	"requestId": "A32W4ER2341",
+	"accountName": "TXIuIEFCQw==",
+	"amount": "aSN2QHZYeExjRE0h"
+}
+```
+or, use CURL command to perform the POST action to the end point
+```
+curl -X POST 'http://0.0.0.0:8000/account/?pretty=true' -H 'Content-Type: application/json' -d '{
+	"requestId": "A32W4ER2341",
+	"accountName": "TXIuIEFCQw==",
+	"amount": "aSN2QHZYeExjRE0h"
+}'

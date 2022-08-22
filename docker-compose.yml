@@ -9,7 +9,6 @@ services:
       - SQLITE3_DB=db.sqlite3
   web:
     image: djdocker_web
-    container_name: djdocker_web_container
     volumes:
       - .:/var/www/html:cached
     ports:
